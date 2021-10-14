@@ -170,6 +170,6 @@ if __name__ == '__main__':
     params1 = sign.GetStringSignTemp(key, data)
     response = requests.request("post", url, headers=headers, data=params1)
     # get请求
-    # params = sign.GetURL(key, data)
-    # response = requests.request("get", url, headers=headers, params=params)
+    params = sign.GetURL(key, data)
+    response = requests.request("get", url, headers=headers, params=params)
     print(response.text)
